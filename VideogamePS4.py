@@ -709,5 +709,5 @@ with tab5:
     st.header("Dados para contato:")
     st.write("💼 [Portfólio: RBI-Dashboards](https://sites.google.com/view/matheus-rocha-de-sousa-lima?usp=sharing)")
     st.write("🔗 [LinkedIn: Matheus Rocha](https://www.linkedin.com/in/matheus-rocha-de-sousa-lima-92174a231/)")
-    st.write("🐙 [GitHub: MatheusRocha100](https://github.com/MatheusRocha100/VideogamePS4)")
+    st.write("🐙 [GitHub: MatheusRocha100](https://github.com/MatheusRocha100)")
     
