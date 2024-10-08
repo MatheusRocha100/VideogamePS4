@@ -696,9 +696,10 @@ with tab3:
 with tab4:
 
     # Gif do Pipeline de Dados
-    gif_url = "https://raw.githubusercontent.com/username/repository/branch/path_to_file.gif"
+    gif_url = "https://raw.githubusercontent.com/MatheusRocha100/VideogamePS4/main/Pipeline-de-Dados-7-_online-video-cutter.com_-_1_.gif"
     gif_html = f'<img src="{gif_url}" alt="GIF" width="400%">'
     st.markdown(gif_html, unsafe_allow_html=True)
+
 
 
 
