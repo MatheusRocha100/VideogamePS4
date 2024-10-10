@@ -604,7 +604,9 @@ with tab3:
     ]
 
     # Países já usados nos continentes "North America", "Europe" e "Asia"
-    included_countries = set(['USA', 'CAN', 'MEX', 'DEU', 'FRA', 'GBR', 'ITA', 'ESP', 'JPN'])
+    included_countries = set(['USA', 'CAN', 'MEX', 'DEU', 'FRA', 'GBR', 'ITA', 'ESP', 'JPN','NOR','PRT','IRL','CHER','BEL','NLD',
+                              'BLR','FIN','UKR','CZE','HRV','SRB','MKD','GRC','BGR','ROU','LTU','POL','HUN','SWE','EST','LVA',
+                              'AUT','CHE','NLD','DNK','SVK','ALB','BIH','MDA','SVN','MNE','LUX','CYP'])
 
     # Países que fazem parte do "Rest of World"
     remaining_countries = set(all_countries) - included_countries
@@ -620,11 +622,13 @@ with tab3:
     # Mapeamento de países por continente
     country_mapping = {
         'North America': ['USA', 'CAN', 'MEX'],  # Países da América do Norte
-        'Europe': ['DEU', 'FRA', 'GBR', 'ITA', 'ESP'],  # Países da Europa
+        'Europe': ['DEU', 'FRA', 'GBR', 'ITA', 'ESP','NOR','PRT','IRL','CHER','BEL','NLD'
+        'BLR','FIN','UKR','CZE','HRV','SRB','MKD','GRC','BGR','ROU','LTU','POL','HUN','SWE','EST','LVA',
+        'AUT','CHE','NLD','DNK','SVK','ALB','BIH','MDA','SVN','MNE','LUX','CYP'],  # Países da Europa
         'Japan': ['JPN'],  # Países da Ásia
         'Rest of World': list(remaining_countries)  # Países do resto do mundo
     }
-
+    
     # Preparar os dados para o mapa
     data = pd.DataFrame({
         'Country': sum(country_mapping.values(), []),
