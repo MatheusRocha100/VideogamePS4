@@ -622,7 +622,7 @@ with tab3:
     # Mapeamento de países por continente
     country_mapping = {
         'North America': ['USA', 'CAN', 'MEX','GRL'],  # Países da América do Norte
-        'Europe': ['DEU', 'FRA', 'GBR', 'ITA', 'ESP','NOR','PRT','IRL','CHER','BEL','NLD'
+        'Europe': ['DEU', 'FRA', 'GBR', 'ITA', 'ESP','NOR','PRT','IRL','CHER','BEL','NLD',
         'BLR','FIN','UKR','CZE','HRV','SRB','MKD','GRC','BGR','ROU','LTU','POL','HUN','SWE','EST','LVA',
         'AUT','CHE','NLD','DNK','SVK','ALB','BIH','MDA','SVN','MNE','LUX','CYP','ISL'],  # Países da Europa
         'Japan': ['JPN'],  # Países da Ásia
