@@ -584,7 +584,7 @@ with tab3:
 
 
 
-    # Lista completa de códigos ISO-3 de países
+   # Lista completa de códigos ISO-3 de países
     all_countries = [
         'AFG', 'ALB', 'DZA', 'ASM', 'AND', 'AGO', 'AIA', 'ATA', 'ATG', 'ARG', 'ARM', 'ABW', 'AUS', 'AUT', 'AZE', 
         'BHS', 'BHR', 'BGD', 'BRB', 'BLR', 'BEL', 'BLZ', 'BEN', 'BMU', 'BTN', 'BOL', 'BES', 'BIH', 'BWA', 'BRA', 
@@ -604,7 +604,7 @@ with tab3:
     ]
 
     # Países já usados nos continentes "North America", "Europe" e "Asia"
-    included_countries = set(['USA', 'CAN', 'MEX', 'DEU', 'FRA', 'GBR', 'ITA', 'ESP', 'JPN', 'CHN', 'KOR'])
+    included_countries = set(['USA', 'CAN', 'MEX', 'DEU', 'FRA', 'GBR', 'ITA', 'ESP', 'JPN'])
 
     # Países que fazem parte do "Rest of World"
     remaining_countries = set(all_countries) - included_countries
@@ -613,7 +613,7 @@ with tab3:
     continent_sales = {
         'North America': filtered_data['North America'].sum(),
         'Europe': filtered_data['Europe'].sum(),
-        'Asia': filtered_data['Japan'].sum(),
+        'Japan': filtered_data['Japan'].sum(),
         'Rest of World': filtered_data['Rest of World'].sum()
     }
 
@@ -621,7 +621,7 @@ with tab3:
     country_mapping = {
         'North America': ['USA', 'CAN', 'MEX'],  # Países da América do Norte
         'Europe': ['DEU', 'FRA', 'GBR', 'ITA', 'ESP'],  # Países da Europa
-        'Asia': ['JPN', 'CHN', 'KOR'],  # Países da Ásia
+        'Japan': ['JPN'],  # Países da Ásia
         'Rest of World': list(remaining_countries)  # Países do resto do mundo
     }
 
@@ -630,11 +630,11 @@ with tab3:
         'Country': sum(country_mapping.values(), []),
         'Continent': ['North America'] * len(country_mapping['North America']) + 
                     ['Europe'] * len(country_mapping['Europe']) + 
-                    ['Asia'] * len(country_mapping['Asia']) + 
+                    ['Japan'] * len(country_mapping['Japan']) + 
                     ['Rest of World'] * len(country_mapping['Rest of World']),
         'Sales': [continent_sales['North America']] * len(country_mapping['North America']) +
                 [continent_sales['Europe']] * len(country_mapping['Europe']) +
-                [continent_sales['Asia']] * len(country_mapping['Asia']) +
+                [continent_sales['Japan']] * len(country_mapping['Japan']) +
                 [continent_sales['Rest of World']] * len(country_mapping['Rest of World'])
     })
 
@@ -642,7 +642,7 @@ with tab3:
     custom_palette = {
         'North America': '#0ACE7F',
         'Europe': '#025963',
-        'Asia': '#67D7A9',
+        'Japan': '#67D7A9',
         'Rest of World': '#A2D2FF' 
     }
 
@@ -650,7 +650,7 @@ with tab3:
     continent_translation = {
         'North America': 'América do Norte',
         'Europe': 'Europa',
-        'Asia': 'Ásia',
+        'Japan': 'Japão',
         'Rest of World': 'Resto do Mundo'
     }
 
